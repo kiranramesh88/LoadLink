@@ -216,3 +216,26 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# Node
+node_modules/
+dist/
+
+# Vite
+.vite/
+
+# Environment
+.env
+
+# SQLite
+db.sqlite3
+
+# Python Virtual Env
+venv/
+apienv/
+
+# Media Files
+media/
+
+# Logs
+*.log
