@@ -1,7 +1,12 @@
 import axios from "axios";
 
-const BASE_URL =
-    "http://127.0.0.1:8000/api/accounts";
+const getBaseURL = () => {
+  const envUrl = import.meta.env.VITE_API_BASE_URL || import.meta.env.VITE_BASE_URL;
+  if (!envUrl) return 'http://127.0.0.1:8000/api';
+  return envUrl.endsWith('/api') ? envUrl : `${envUrl}/api`;
+};
+
+const BASE_URL = `${getBaseURL()}/accounts`;
 
 
 // ======================================

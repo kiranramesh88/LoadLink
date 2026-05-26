@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import { fetchUnionRequestsApi } from '../services/unionAPI';
 import toast from 'react-hot-toast';
 
-const WS_BASE = 'ws://127.0.0.1:8000';
+const WS_BASE = import.meta.env.VITE_WS_URL || 'ws://127.0.0.1:8000';
 
 const WORK_LABELS = {
   shop_unloading: 'Shop / Textile Unloading',

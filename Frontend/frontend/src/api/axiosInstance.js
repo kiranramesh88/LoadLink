@@ -1,8 +1,13 @@
 import axios from 'axios';
 
-// Central axios instance with auth interceptors
+const getBaseURL = () => {
+  const envUrl = import.meta.env.VITE_API_BASE_URL || import.meta.env.VITE_BASE_URL;
+  if (!envUrl) return 'http://127.0.0.1:8000/api';
+  return envUrl.endsWith('/api') ? envUrl : `${envUrl}/api`;
+};
+
 const api = axios.create({
-  baseURL: 'http://127.0.0.1:8000/api',
+  baseURL: getBaseURL(),
   headers: { 'Content-Type': 'application/json' },
 });
 

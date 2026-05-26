@@ -6,7 +6,7 @@ import api from '../../../api/axiosInstance';
 import toast from 'react-hot-toast';
 import useNotificationSocket from '../../../hooks/useNotificationSocket';
 
-const WS_BASE = 'ws://127.0.0.1:8000';
+const WS_BASE = import.meta.env.VITE_WS_URL || 'ws://127.0.0.1:8000';
 
 const STATUS_STEPS = [
   { key: 'created',          label: 'Request Submitted',      icon: 'assignment_turned_in', desc: 'Your request is being processed.' },

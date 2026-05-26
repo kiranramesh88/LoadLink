@@ -1,6 +1,6 @@
 import api from '../../../api/axiosInstance';
 
-const WS_BASE = 'ws://127.0.0.1:8000';
+const WS_BASE = import.meta.env.VITE_WS_URL || 'ws://127.0.0.1:8000';
 export { WS_BASE };
 
 // ── Dashboard ─────────────────────────────────────────────
