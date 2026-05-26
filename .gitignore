@@ -227,9 +227,6 @@ dist/
 # Environment
 .env
 
-# SQLite
-db.sqlite3
-
 # Python Virtual Env
 venv/
 apienv/
